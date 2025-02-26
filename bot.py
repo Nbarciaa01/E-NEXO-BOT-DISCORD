@@ -22,18 +22,17 @@ async def play(ctx, equipo1: str, equipo2: str):
     # Selecciona un mapa aleatorio
     mapa_elegido = random.choice(mapas)
 
-    # Asigna los lados de forma aleatoria
+    # Asigna los lados aleatoriamente sin importar el orden de los equipos
     lados = ["Atacante", "Defensor"]
     random.shuffle(lados)  # Mezcla los lados
-    lado_equipo1 = lados[0]
-    lado_equipo2 = lados[1]
+    asignaciones = {equipo1: lados[0], equipo2: lados[1]}  # Asigna los lados aleatoriamente
 
     # Mensaje de respuesta
     mensaje = (
         f"**Partida generada:**\n"
         f"🔹 **Mapa:** {mapa_elegido}\n"
-        f"🔹 **{equipo1}:** {lado_equipo1}\n"
-        f"🔹 **{equipo2}:** {lado_equipo2}"
+        f"🔹 **{equipo1}:** {asignaciones[equipo1]}\n"
+        f"🔹 **{equipo2}:** {asignaciones[equipo2]}"
     )
 
     await ctx.send(mensaje)
