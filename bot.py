@@ -4,7 +4,7 @@ import os
 from discord.ext import commands
 
 # Lista de mapas de Valorant
-mapas = ["Bind", "Haven", "Split", "Ascent", "Icebox", "Breeze", "Fracture"]
+mapas = ["Bind", "Haven", "Split", "Ascent", "Icebox", "Breeze", "Fracture", "Lotus", "Pearl", "Abyss"]
 
 # Configura el bot con los intents necesarios
 intents = discord.Intents.default()
