@@ -1,5 +1,6 @@
 import discord
 import random
+import os
 from discord.ext import commands
 
 # Lista de mapas de Valorant
@@ -38,4 +39,4 @@ async def play(ctx, equipo1: str, equipo2: str):
     await ctx.send(mensaje)
 
 # Inicia el bot
-bot.run("DISCORD_TOKEN")
+bot.run(os.getenv("DISCORD_TOKEN"))
